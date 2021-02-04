@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+// Layout
+import Layout from 'antd/lib/layout';
 
-function App() {
+// typography
+import { Typography, Space } from 'antd/lib';
+import { FormPdf} from './components/Form_pdf';
+
+
+const { Text } = Typography;
+
+const { Header, Footer, Content } = Layout;
+
+
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Layout className='layout-content'>
+      <Header className='header-content'>
+        Creating-PDF
+      </Header>
+      <Content className='content-form'>
+        <FormPdf />
+
+      </Content>
+      <Footer className='footer-content'>
+        <Space direction='vertical'>
+          <Text className='text-footer-1'>
+            Creating State of accounts
+          </Text>
+          <Text className='text-footer'>
+            Bryan Sánchez	&copy; 2021 
+          </Text>
+        </Space>
+      </Footer>
+    </Layout>
   );
 }
 
