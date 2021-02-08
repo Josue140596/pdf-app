@@ -46,6 +46,17 @@
     font-size: 20px;
 }
 
+.content-loading{
+    background-color: #ff3e3e;
+    height: 200px;
+}
+.loading-text{
+    color: white;
+    display: flex;
+    font-size: 42px;
+    justify-content: center;
+}
+
 @media only screen and (max-width: 600px) {
     .sub-content-form {
         box-shadow: none;
